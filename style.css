@@ -1,0 +1,459 @@
+/* --- ზოგადი სტილები ვებგვერდისთვის --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* --- ნავიგაციის სტილები (header nav) --- */
+nav {
+    background: #004080;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0; /* დავამატე margin: 0 და padding: 0 რადგან სხვაგანაც მეორდებოდა */
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* --- ლოგოების სტილები --- */
+img.logo {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* --- ფუტერის სტილები --- */
+footer {
+    background: #00264d;
+    color: white; /* შეიცვალა rgb(225, 206, 148) -> white, რადგან სხვა ფუტერებშიც white იყო */
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem; /* დავამატე, რადგან მთავარ გვერდზე აკლდა */
+}
+
+
+/* --- მთავარი გვერდის სტილები (index.html) --- */
+.main {
+    background: url('../images/banner.jpg') no-repeat center center/cover;
+    color: rgb(56, 48, 119);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.webinfo {
+    padding: 2rem;
+    background: rgb(255, 255, 255);
+}
+
+.webinfo ul { /* შევასწორე .features ul-დან .webinfo ul-ზე */
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.more { /* შევასწორე .cta-დან .more-ზე */
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.learnmore {
+    background: #004080;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.learnmore:hover, /* გაერთიანდა .btn:hover-თან */
+.btn:hover { /* .btn არ იყო არსად HTML-ში, ალბათ .learnmore-ს გულისხმობდა */
+    background: #0066cc;
+}
+
+
+/* --- ჩვენს შესახებ გვერდის სტილები (about.html) --- */
+.aboutus {
+    background-color: white;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus h1 {
+    text-align: center;
+    color: #004080;
+}
+
+.aboutus h2 {
+    margin-top: 2rem;
+    color: #333;
+}
+
+.aboutus ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+
+/* --- სერვისების გვერდის სტილები (services.html) --- */
+.services {
+    padding: 2rem;
+    text-align: center;
+}
+
+.services h1 {
+    color: #004080;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 280px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    background-color: #e6f0ff;
+}
+
+.service-card h2 {
+    color: #004080;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+
+/* --- სიახლეების გვერდის სტილები (news.html) --- */
+.news {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.news h1 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 2rem;
+}
+
+.news-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-item h2 {
+    color: #0066cc;
+}
+
+
+/* --- კონტაქტის გვერდის სტილები (contact.html) --- */
+.contact {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact h1 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.form-section h2 {
+    color: #004080;
+    margin-top: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input,
+form textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background: #004080;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0066cc;
+}
+
+
+/* --- დაცვა და დახმარების გვერდის სტილები (defense.html) --- */
+main.defense {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+main.defense h1 { /* კონკრეტულად .defense-ზე რომ არ იმოქმედოს გლობალურ h1-ზე */
+    color: #004080;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.defense section {
+    margin-bottom: 2rem;
+}
+
+.defense section h2 {
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.defense ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.defense a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.defense a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- ანონიმური ჩატის გვერდის სტილები (chat.html) --- */
+.chat-container {
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.chat-container h1 {
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.chat-container textarea {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.chat-container button {
+    background: #004080;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.chat-container button:hover {
+    background: #0066cc;
+}
+
+.response {
+    background: #e6f7ff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+
+/* --- ბლოგის გვერდის სტილები (blog.html) --- */
+.blog {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.blog h1 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.blog textarea {
+    width: 100%;
+    height: 120px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.blog button {
+    background: #004080;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.blog button:hover {
+    background: #0066cc;
+}
+
+.post {
+    background: #e6f0ff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+
+/* --- ვიდეოები და კომიქსების გვერდის სტილები (media.html) --- */
+.media {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.media h1 {
+    color: #004080;
+    margin-bottom: 2rem;
+}
+
+.media-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.media-item {
+    width: 300px;
+}
+
+.media-item iframe,
+.media-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* --- უფლებების ტესტის გვერდის სტილები (test.html) --- */
+.test {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.test h1 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.question {
+    margin-bottom: 2rem;
+}
+
+button[type="submit"] {
+    background: #004080;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background: #0066cc;
+}

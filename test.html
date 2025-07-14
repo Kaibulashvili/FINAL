@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>უფლებების ტესტი</title>
+  <link rel="stylesheet" href="style.css">  <link rel="icon" href="logo.png" type="" />
+</head>
+<body>
+  <header>
+   <nav>
+     <div class="logo-container"> 
+           <img src="logo.png" alt="logo" class="logo" onclick="window.location.href='https://www.amnesty.org/en/what-we-do/child-rights/' " />
+           <img src="tbc.png" alt=" TBC logo" class="logo" onclick="window.location.href='https://tbcbank.ge/ka' "/>
+       </div>
+    <ul>
+        <li><a href="index.html">მთავარი</a></li>
+        <li><a href="about.html">ჩვენს შესახებ</a></li>
+        <li><a href="services.html">სერვისები</a></li>
+        <li><a href="news.html">სიახლე</a></li>
+        <li><a href="contact.html">კონტაქტი</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="test">
+    <h1>შეამოწმე შენი ცოდნა!</h1>
+    <form>
+      <div class="question">
+        <p>1. რამდენ წლამდე ითვლება ადამიანი ბავშვად გაეროს კონვენციის მიხედვით?</p>
+        <input type="radio" id="q1a1" name="q1" value="a"> <label for="q1a1">16 წლამდე</label><br>
+        <input type="radio" id="q1a2" name="q1" value="b"> <label for="q1a2">18 წლამდე</label><br>
+        <input type="radio" id="q1a3" name="q1" value="c"> <label for="q1a3">21 წლამდე</label><br>
+      </div>
+
+      <div class="question">
+        <p>2. შეიძლება თუ არა ბავშვის დასაქმება მისი ნების საწინააღმდეგოდ?</p>
+        <input type="radio" id="q3a1" name="q3" value="a"> <label for="q3a1">დიახ</label><br>
+        <input type="radio" id="q3a2" name="q3" value="b"> <label for="q3a2">არა</label><br>
+      </div>
+      
+      <button type="submit">შედეგების ნახვა</button>
+  </form>
+  </main>
+
+  <footer>
+    <p>© 2025 ბავშვთა უფლებები</p>
+  </footer>
+</body>
+</html>
